@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Entrenador
+comment1.params=nombreApellido\ sueldoMes
+comment1.target=Entrenador(java.lang.String,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getNombre()
+comment3.params=
+comment3.target=int\ getSueldo()
+comment4.params=
+comment4.target=boolean\ getEquipo()
+comment5.params=
+comment5.target=void\ mejoraSueldo()
+comment6.params=equipo
+comment6.target=void\ fichaPorEquipo(boolean)
+comment7.params=
+comment7.target=void\ imprimirDatos()
+comment8.params=
+comment8.target=java.lang.String\ obtenerdetalles()
+numComments=9
