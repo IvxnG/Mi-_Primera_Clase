@@ -3,12 +3,17 @@ public class Entrenador{
     private String nombre;
     //Sueldo que cobra por entrenar
     private int sueldo;
-    //Pertenece actualmente a un club sí(true) o no(false)
+    //Pertenece actualmente a un club 
     private boolean tieneEquipo;
     
     public Entrenador(String nombreApellido, int sueldoMes) {
         nombre = nombreApellido;
         sueldo = sueldoMes;
+        tieneEquipo = false;
+    }
+    
+    public void setNombre(String nuevoNombre) {
+        nombre = nuevoNombre;   
     }
     
     public String getNombre(){
@@ -27,15 +32,34 @@ public class Entrenador{
         sueldo = sueldo + 200;
     }
     
-    public void fichaPorEquipo(boolean equipo){
-        tieneEquipo = equipo;    
+    public void fichaPorEquipo(){
+        if(tieneEquipo == true){
+            tieneEquipo = false;
+        }
+        else{
+            tieneEquipo = true;    
+        }
     }
     
     public void imprimirDatos(){
-        System.out.println(nombre + "|" + sueldo + "€" + "|" +  "Tiene equipo =" + tieneEquipo );
+        String entrenaEquipo;
+        if(tieneEquipo == true){
+            entrenaEquipo = "Sí entrena.";
+        }
+        else{
+            entrenaEquipo = "No entrena.";
+        }
+        System.out.println(nombre + "|" + sueldo + "€" + "|" +  "Entrena algun equipo = " + entrenaEquipo);
     }
     
-    public String obtenerdetalles(){
-        return nombre + "|" + sueldo + "€" + "|" +  "Tiene equipo =" + tieneEquipo;  
+    public String obtenerDetalles(){
+        String entrenaEquipo;
+        if(tieneEquipo == true){
+            entrenaEquipo = "Sí entrena.";
+        }
+        else{
+            entrenaEquipo = "No entrena.";
+        }
+        return nombre + "|" + sueldo + "€" + "|" +  "Entrena algun equipo = " + entrenaEquipo; 
     }
 }
